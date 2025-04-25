@@ -1,0 +1,164 @@
+.orders-page {
+  padding: 40px 0;
+}
+
+.orders-page h1 {
+  margin-bottom: 30px;
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.orders-list {
+  margin-bottom: 40px;
+}
+
+.orders-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.orders-table th,
+.orders-table td {
+  padding: 16px;
+  text-align: left;
+  border-bottom: 1px solid #e2e2e2;
+}
+
+.orders-table th {
+  background-color: #f8f9fa;
+  font-weight: 600;
+}
+
+.order-item {
+  transition: background-color 0.2s;
+}
+
+.order-item:hover {
+  background-color: #f8f9fa;
+}
+
+.order-id {
+  font-weight: 600;
+}
+
+.order-date {
+  color: #6c757d;
+}
+
+.order-total {
+  font-weight: 600;
+  color: #3f51b5;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.status-pending {
+  background-color: #ffeeba;
+  color: #856404;
+}
+
+.status-processing {
+  background-color: #b8daff;
+  color: #004085;
+}
+
+.status-shipped {
+  background-color: #c3e6cb;
+  color: #155724;
+}
+
+.status-delivered {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.status-cancelled {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.order-actions .btn {
+  padding: 6px 12px;
+  font-size: 14px;
+}
+
+.btn-sm {
+  padding: 6px 12px;
+  font-size: 14px;
+}
+
+.no-orders {
+  text-align: center;
+  padding: 60px 0;
+}
+
+.no-orders h2 {
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+
+.no-orders p {
+  color: #6c757d;
+  margin-bottom: 24px;
+}
+
+.loading,
+.error {
+  text-align: center;
+  padding: 60px 0;
+  color: #6c757d;
+  font-size: 18px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .orders-table thead {
+    display: none;
+  }
+  
+  .orders-table, 
+  .orders-table tbody, 
+  .orders-table tr, 
+  .orders-table td {
+    display: block;
+    width: 100%;
+  }
+  
+  .orders-table tr {
+    margin-bottom: 20px;
+    border: 1px solid #e2e2e2;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .orders-table td {
+    display: flex;
+    padding: 12px 16px;
+    text-align: right;
+    position: relative;
+    border-bottom: 1px solid #e2e2e2;
+  }
+  
+  .orders-table td:last-child {
+    border-bottom: none;
+  }
+  
+  .orders-table td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 16px;
+    width: 30%;
+    font-weight: 600;
+    text-align: left;
+  }
+  
+  .orders-table td.order-actions {
+    justify-content: center;
+  }
+} 

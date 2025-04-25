@@ -1,0 +1,410 @@
+.checkout-page {
+  background-color: #F3F3F3;
+  min-height: 100vh;
+  padding: 20px 0 40px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.checkout-header {
+  margin-bottom: 20px;
+}
+
+.checkout-header h1 {
+  font-size: 28px;
+  font-weight: 400;
+  color: #0F1111;
+}
+
+/* Checkout Steps */
+.checkout-steps {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.step {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.step-number {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #D5D9D9;
+  color: #0F1111;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.step.active .step-number {
+  background-color: #007185;
+  color: white;
+}
+
+.step.completed .step-number {
+  background-color: #007600;
+  color: white;
+}
+
+.step-title {
+  font-size: 14px;
+  color: #565959;
+}
+
+.step.active .step-title {
+  color: #0F1111;
+  font-weight: 500;
+}
+
+.step-connector {
+  flex-grow: 1;
+  height: 2px;
+  background-color: #D5D9D9;
+  margin: 0 10px;
+}
+
+.step-connector.completed {
+  background-color: #007600;
+}
+
+/* Checkout Content Layout */
+.checkout-content {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 300px;
+  gap: 20px;
+}
+
+/* Main Content Area */
+.checkout-main {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Styles */
+.form-group {
+  margin-bottom: 16px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #0F1111;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #D5D9D9;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.form-group input.error {
+  border-color: #CC0C39;
+}
+
+.error-message {
+  color: #CC0C39;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.checkbox input {
+  width: auto;
+}
+
+.checkbox label {
+  margin-bottom: 0;
+}
+
+/* Card Input */
+.card-input {
+  position: relative;
+}
+
+.card-icon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #565959;
+}
+
+.card-input input {
+  padding-left: 36px;
+}
+
+/* Button Styles */
+.btn-row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 24px;
+}
+
+.btn-primary {
+  background-color: #FFD814;
+  border: 1px solid #FCD200;
+  border-radius: 8px;
+  padding: 8px 16px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-primary:hover {
+  background-color: #F7CA00;
+}
+
+.btn-back {
+  background-color: transparent;
+  border: none;
+  color: #007185;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  padding: 8px 0;
+  font-size: 14px;
+}
+
+.btn-back:hover {
+  color: #C7511F;
+  text-decoration: underline;
+}
+
+.btn-edit {
+  background-color: transparent;
+  border: none;
+  color: #007185;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.btn-edit:hover {
+  color: #C7511F;
+  text-decoration: underline;
+}
+
+.place-order {
+  font-weight: 500;
+  padding: 10px 20px;
+}
+
+.place-order-sm {
+  width: 100%;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  padding: 10px;
+}
+
+/* Secure Transaction Notice */
+.secure-transaction-notice {
+  display: flex;
+  align-items: center;
+  color: #007600;
+  font-size: 12px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.secure-transaction-notice span {
+  margin-left: 8px;
+}
+
+/* Review Section */
+.review-block {
+  border-bottom: 1px solid #DDD;
+  padding-bottom: 16px;
+  margin-bottom: 16px;
+  position: relative;
+}
+
+.review-block h3 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #0F1111;
+}
+
+.review-content {
+  font-size: 14px;
+  color: #333;
+  line-height: 1.5;
+}
+
+.btn-edit {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.review-items {
+  margin-top: 24px;
+}
+
+.review-item {
+  display: grid;
+  grid-template-columns: 60px 1fr auto;
+  gap: 16px;
+  margin-bottom: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #EEE;
+}
+
+.item-img img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+.item-name {
+  font-weight: 500;
+  margin-bottom: 4px;
+  font-size: 14px;
+}
+
+.item-qty {
+  font-size: 12px;
+  color: #565959;
+}
+
+.item-price {
+  font-weight: 700;
+  font-size: 14px;
+}
+
+/* Order Summary */
+.order-summary {
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.summary-header {
+  padding: 12px 20px;
+  background-color: #F0F2F2;
+  border-bottom: 1px solid #DDD;
+}
+
+.summary-header h2 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #0F1111;
+  margin: 0;
+}
+
+.summary-body {
+  padding: 20px;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  font-size: 14px;
+  color: #0F1111;
+}
+
+.summary-row.total {
+  font-size: 18px;
+  font-weight: 700;
+  color: #0F1111;
+}
+
+.summary-divider {
+  height: 1px;
+  background-color: #DDD;
+  margin: 16px 0;
+}
+
+.shipping-note {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  color: #0F1111;
+}
+
+.shipping-note span {
+  margin-left: 8px;
+}
+
+/* Empty Cart Message */
+.empty-cart-message {
+  background-color: white;
+  border-radius: 8px;
+  padding: 40px 20px;
+  text-align: center;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.empty-cart-message h2 {
+  font-size: 24px;
+  margin-bottom: 12px;
+  color: #0F1111;
+}
+
+.empty-cart-message p {
+  margin-bottom: 24px;
+  color: #565959;
+}
+
+/* Loading State */
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+  font-size: 16px;
+  color: #565959;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .checkout-content {
+    grid-template-columns: 1fr;
+  }
+  
+  .order-summary {
+    order: -1;
+    margin-bottom: 20px;
+  }
+  
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+  
+  .review-item {
+    grid-template-columns: 50px 1fr auto;
+    gap: 10px;
+  }
+} 
